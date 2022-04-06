@@ -1,0 +1,12 @@
+build
+lib
+coverage
+node_modules
+**/*.md
+**/*.svg
+**/*.ejs
+**/*.html
+package.json
+**/.gitkeep
+.stylelintignore
+template/gitignore

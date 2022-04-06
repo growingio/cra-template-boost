@@ -1,0 +1,79 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "globals": {
+    "JSX": "readonly",
+    "Module": "readonly",
+    "CurrentUser": "readonly",
+    "Feature": "readonly",
+    "Project": "readonly",
+    "DataCenterInfo": "readonly"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/no-unused-prop-types": "warn",
+    "react/prop-types": "error",
+    "react/require-default-props": "off",
+    "no-use-before-define": "off",
+    "react/jsx-no-bind": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "react/jsx-uses-react": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-props-no-spreading": ["error", { "html": "enforce", "custom": "ignore", "explicitSpread": "ignore" }],
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": false }],
+    "import/extensions": ["off", "never"],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+    "react/jsx-one-expression-per-line": ["off", { "allow": "single-child" }],
+    "react/static-property-placement": ["off", "static public field"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "import/prefer-default-export": "off",
+    "react/destructuring-assignment": ["warn", "always"],
+    "jsx-a11y/alt-text": [1],
+    "jsx-a11y/no-static-element-interactions": [0],
+    "jsx-a11y/click-events-have-key-events": [0],
+    "jsx-a11y/anchor-is-valid": [0],
+    "no-plusplus": [0],
+    "no-param-reassign": "off",
+    "no-nested-ternary": "off",
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": ["error"],
+    "no-undef": "error",
+    "import/order": "warn",
+    "no-prototype-builtins": "off",
+    "prefer-destructuring": ["warn", { "array": false, "object": true }],
+    "consistent-return": "off",
+    "camelcase": [
+      "warn",
+      {
+        "ignoreDestructuring": true,
+        "ignoreGlobals": true,
+        "properties": "never"
+      }
+    ],
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-console": "off",
+    "no-restricted-properties": ["off"],
+    "no-restricted-syntax": ["error", "BinaryExpression[operator='in']"],
+    "class-methods-use-this": "off",
+    "react/no-array-index-key": "warn"
+  }
+}

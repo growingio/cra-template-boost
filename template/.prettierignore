@@ -1,0 +1,11 @@
+build
+coverage
+node_modules
+**/*.md
+**/*.svg
+**/*.ejs
+**/*.html
+package.json
+/src/types.ts
+/src/**/document.generated.ts
+*.yml

@@ -1,0 +1,43 @@
+{
+  "name": "@growingio/cra-template-boost",
+  "version": "1.0.0",
+  "description": "a create-react-app template for gio frontend",
+  "main": "template.json",
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "repository": "git@github.com:growingio/cra-template-boost.git",
+  "author": "GrowingIO Frontend Team <eng-frontend@growingio.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "craco",
+    "create-react-app",
+    "eslint",
+    "stylelint",
+    "prettier",
+    "react",
+    "template",
+    "typescript",
+    "swc",
+    "jest"
+  ],
+  "scripts": {
+    "prettier": "prettier -c --write **/*",
+    "postinstall": "husky install && yarn husky:init",
+    "husky:init": "husky set .husky/prepare-commit-msg 'exec < /dev/tty && ./node_modules/.bin/cz --hook || true'&& husky set .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"'&& husky set .husky/pre-commit 'npm run prettier'"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

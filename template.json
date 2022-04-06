@@ -1,0 +1,56 @@
+{
+  "package": {
+    "dependencies": {
+      "react-router-dom": "^6.3.0"
+    },
+    "devDependencies": {
+      "@commitlint/cli": "^16.2.3",
+      "@commitlint/config-conventional": "^16.2.1",
+      "@craco/craco": "^6.4.3",
+      "@swc/jest": "^0.2.20",
+      "craco-alias": "^3.0.1",
+      "craco-less": "^2.0.0",
+      "craco-swc": "^0.5.0",
+      "@testing-library/jest-dom": "^5.16.2",
+      "@testing-library/react": "^13.0.0",
+      "@testing-library/user-event": "^14.0.0",
+      "@typescript-eslint/eslint-plugin": "^5.12.0",
+      "@typescript-eslint/parser": "^5.12.0",
+      "@types/jest": "^27.4.0",
+      "@types/node": "^17.0.18",
+      "@types/react": "^17.0.39",
+      "@types/react-dom": "^17.0.11",
+      "@types/react-router-dom": "^5.3.3",
+      "editorconfig": "0.15.3",
+      "sass": "^1.49.8",
+      "typescript": "^4.5.5",
+      "babel-plugin-react-remove-properties": "^0.3.0",
+      "eslint": "^8.9.0",
+      "eslint-config-proste": "^2.5.1",
+      "eslint-plugin-react": "^7.28.0",
+      "eslint-plugin-import": "^2.25.4",
+      "eslint-plugin-react-hooks": "^4.3.0",
+      "eslint-config-prettier": "^8.4.0",
+      "prettier": "^2.5.1",
+      "postcss": "^8.4.6",
+      "react-test-renderer": "^18.0.0",
+      "stylelint": "^14.5.1",
+      "stylelint-config-recess-order": "^3.0.0",
+      "stylelint-config-standard": "^25.0.0",
+      "stylelint-config-standard-scss": "^3.0.0",
+      "stylelint-config-prettier": "^9.0.3"
+    },
+    "scripts": {
+      "start": "craco start",
+      "build": "craco build",
+      "test": "craco test",
+      "stylelint:fix": "yarn stylelint --fix",
+      "eslint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix --cache",
+      "stylelint": "stylelint 'src/**/*.{css,less}' --custom-syntax postcss-less",
+      "eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
+      "lint": "yarn stylelint -f json > stylelint-report.json && yarn eslint -f json -o eslint-report.json",
+      "postinstall": "husky install && yarn husky:init",
+      "husky:init": "husky set .husky/prepare-commit-msg 'exec < /dev/tty && ./node_modules/.bin/cz --hook || true'&& husky set .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"'&& husky set .husky/pre-commit 'npx lint-staged'"
+    }
+  }
+}
