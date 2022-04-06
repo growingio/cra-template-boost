@@ -24,9 +24,7 @@
     "jest"
   ],
   "scripts": {
-    "prettier": "prettier -c --write **/*",
-    "postinstall": "husky install && yarn husky:init",
-    "husky:init": "husky set .husky/prepare-commit-msg 'exec < /dev/tty && ./node_modules/.bin/cz --hook || true'&& husky set .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"'&& husky set .husky/pre-commit 'npm run prettier'"
+    "prettier": "prettier -c --write **/*"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",

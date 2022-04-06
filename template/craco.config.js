@@ -103,20 +103,19 @@ module.exports = {
         source: 'tsconfig',
         // baseUrl SHOULD be specified
         // plugin does not take it from tsconfig
-        baseUrl: './src',
+        baseUrl: '.',
         // tsConfigPath should point to the file where "baseUrl" and "paths" are specified
         tsConfigPath: './tsconfig.extend.json',
       },
     },
     {
       plugin: {
-        overrideWebpackConfig: ({ webpackConfig, cracoConfig, pluginOptions, context: { env, paths } }) => {
-          if (pluginOptions.preText) {
-            console.log(pluginOptions.preText);
+        overrideWebpackConfig: ({ webpackConfig, pluginOptions, context: { env, paths } }) => {
+          if (env !== 'development') {
+            return webpackConfig;
           }
           const content = JSON.stringify(webpackConfig, null, 4);
-          console.log(content);
-          if (eject === true) {
+          if (pluginOptions.eject === true) {
             console.log('will eject webpackConfig to file %s', path.join(paths.appPath, 'webpack.runtime.config.json'));
             fs.writeFileSync(path.join(paths.appPath, 'webpack.runtime.config.json'), content, { encoding: 'utf-8' });
           }
@@ -124,7 +123,8 @@ module.exports = {
           return webpackConfig;
         },
       },
-      options: { preText: 'Will log the craco config:', eject: true },
+      // to log webpack config you can set eject:true
+      options: { eject: false },
     },
   ],
 };
