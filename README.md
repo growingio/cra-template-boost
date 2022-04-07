@@ -1,9 +1,6 @@
-# cra-template-qwe
+# cra-template-boost
 
-[![npm version](https://img.shields.io/npm/v/cra-template-qwe.svg?style=flat-square)](https://www.npmjs.com/package/cra-template-qwe)
-[![npm downloads](https://img.shields.io/npm/dm/cra-template-qwe.svg?style=flat-square)](https://www.npmjs.com/package/cra-template-qwe)
-
-My daily use template for [Create React App](https://github.com/facebook/create-react-app)
+  [Create React App](https://github.com/facebook/create-react-app) template for GrowingIO frontend team
 
 ## Usage
 
@@ -16,27 +13,27 @@ npx create-react-app my-app --template @growingio/boost
 # or
 yarn create react-app my-app --template @growingio/boost
 ```
-# ✨Packages
+# Packages
 
 > typescript is used in the project, and all dependencies that need to install @types/xxx have been
 > added
 
-✅ react-route-dom
+- react-route-dom
 
-✅ typescript
+- typescript
 
-✅ craco
+- craco
 
-✅ testing-library
+- testing-library
 
-✅ less
+- less
 
-✅ swc
+- swc
 
-# ✨Preset
-✅ folder(pages, routes, assets, hooks, components, styles, utils)
+# Preset
+- folder(pages, routes, assets, hooks, components, styles, utils)
 
-✅ qiankun micro-frontend settings, lifycicle methods
+- qiankun micro-frontend settings, lifycycle methods
 
 For more information, please refer to:
 
