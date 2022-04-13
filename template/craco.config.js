@@ -85,6 +85,21 @@ module.exports = {
       options: {
         swcLoaderOptions: {
           jsc: {
+            transform: {
+              react: {
+                runtime: 'automatic',
+                pragma: 'React.createElement',
+                pragmaFrag: 'React.Fragment',
+                throwIfNamespace: true,
+              },
+              optimizer: {
+                globals: {
+                  vars: {
+                    __DEBUG__: 'true',
+                  },
+                },
+              },
+            },
             externalHelpers: true,
             target: 'es2015',
             parser: {
