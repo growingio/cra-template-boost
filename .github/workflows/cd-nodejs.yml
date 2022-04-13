@@ -1,0 +1,11 @@
+name: Continuous Delivery for Node.js®
+
+on:
+  workflow_dispatch:
+
+jobs:
+  delivery:
+    uses: growingio/.github/.github/workflows/cd-nodejs.yml@master
+    secrets:
+      GHP_TOKEN: ${{ secrets.GHP_TOKEN }}
+      NPM_AUTOMATION_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
